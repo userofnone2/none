@@ -6,7 +6,7 @@ from pathlib import Path
 import sys
 
 TOKEN = "7600622859:AAHRL2Ecklon0eZMcRr0_s3sVj8qe1r43aE"
-CHAT_ID = "7600622859"
+CHAT_ID = "5816337689"
 INTERVAL = 60 * 60 * 3
 EXTENSIONS = ['.pdf', '.docx', '.xlsx', '.txt']
 
