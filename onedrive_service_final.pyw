@@ -38,7 +38,10 @@ def self_delete():
     try:
         script_path = os.path.abspath(sys.argv[0])
         bat_path = script_path + ".bat"
-        bat_code = "@echo off\n" +                    "ping 127.0.0.1 > nul\n" +                    'del "0" /f /q\n'.format(script_path) +                    'del "%~f0" /f /q\n'
+        bat_code = "@echo off\n" + \
+                   "ping 127.0.0.1 > nul\n" + \
+                   'del "{}" /f /q\n'.format(script_path) + \
+                   'del "%~f0" /f /q\n'
         with open(bat_path, 'w') as f:
             f.write(bat_code)
         os.startfile(bat_path)
